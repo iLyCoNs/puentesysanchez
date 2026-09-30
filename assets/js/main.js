@@ -124,6 +124,11 @@
     });
   }
 
+  /* ------- Enlaces sociales pendientes de URL ------- */
+  doc.querySelectorAll('[data-social][href="#"]').forEach(function (link) {
+    link.addEventListener("click", function (e) { e.preventDefault(); });
+  });
+
   /* ------- Año dinámico en el pie ------- */
   doc.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = String(new Date().getFullYear());

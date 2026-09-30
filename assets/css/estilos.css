@@ -710,9 +710,9 @@ h1 + .eyebrow, .eyebrow:first-child { margin-top: 0; }
 .team-card:hover { transform: translateY(-4px); border-color: var(--line-gold); box-shadow: var(--shadow-lg); }
 .team-card__photo {
   position: relative;
-  width: min(14.5rem, 82%);
-  margin: 0 auto 2.1rem;
-  padding: 0.55rem;
+  width: min(11.5rem, 78%);
+  margin: 0 auto 2rem;
+  padding: 0.5rem;
   background: var(--paper);
   border: 1px solid var(--line-gold);
   box-shadow: 0 22px 44px -26px rgba(13, 27, 46, 0.5);
@@ -720,7 +720,7 @@ h1 + .eyebrow, .eyebrow:first-child { margin-top: 0; }
 .team-card__photo::before {
   content: "";
   position: absolute;
-  inset: calc(0.55rem - 1px);
+  inset: calc(0.5rem - 1px);
   border: 1px solid rgba(16, 30, 51, 0.22);
   pointer-events: none;
   z-index: 2;
@@ -739,8 +739,8 @@ h1 + .eyebrow, .eyebrow:first-child { margin-top: 0; }
   transform: translate(-50%, 55%);
   display: grid;
   place-items: center;
-  width: 2.7rem;
-  height: 2.7rem;
+  width: 2.4rem;
+  height: 2.4rem;
   border-radius: 999px;
   background: linear-gradient(160deg, var(--navy), var(--navy-700));
   border: 1px solid var(--line-gold);
@@ -748,7 +748,7 @@ h1 + .eyebrow, .eyebrow:first-child { margin-top: 0; }
   color: var(--gold-300);
   z-index: 3;
 }
-.team-card__photo-seal svg { width: 1.3rem; height: 1.3rem; }
+.team-card__photo-seal svg { width: 1.15rem; height: 1.15rem; }
 .team-card::before {
   content: "";
   position: absolute;
@@ -1099,6 +1099,24 @@ h1 + .eyebrow, .eyebrow:first-child { margin-top: 0; }
 .footer__brand-name { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: #fff; line-height: 1.1; }
 .footer__brand-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold-300); }
 .footer__about { max-width: 30rem; font-size: 0.88rem; line-height: 1.7; }
+.footer__social { display: flex; gap: 0.6rem; margin-top: 1.4rem; }
+.social-btn {
+  display: grid;
+  place-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.78);
+  transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+}
+.social-btn:hover {
+  color: var(--navy);
+  background: var(--gold-300);
+  border-color: var(--gold-300);
+  transform: translateY(-2px);
+}
+.social-btn svg { width: 1.15rem; height: 1.15rem; }
 .footer h3 {
   font-family: var(--font-body);
   font-size: 0.78rem;
