@@ -708,23 +708,52 @@ h1 + .eyebrow, .eyebrow:first-child { margin-top: 0; }
   transition: transform 0.24s ease, border-color 0.24s ease, box-shadow 0.24s ease;
 }
 .team-card:hover { transform: translateY(-4px); border-color: var(--line-gold); box-shadow: var(--shadow-lg); }
-.team-card__avatar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 6.2rem;
-  height: 6.2rem;
-  margin: 0 auto 1.3rem;
+.team-card__photo {
+  position: relative;
+  width: 10.8rem;
+  height: 10.8rem;
+  margin: 0 auto 1.7rem;
   border-radius: 999px;
-  background: linear-gradient(150deg, var(--navy) 20%, var(--navy-700));
-  border: 1px solid var(--line-gold);
-  box-shadow: inset 0 0 0 6px rgba(192, 154, 94, 0.14);
-  font-family: var(--font-display);
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--gold-300);
-  letter-spacing: 0.04em;
+  overflow: hidden;
+  box-shadow: 0 24px 48px -24px rgba(13, 27, 46, 0.55);
+  outline: 1px solid var(--line-gold);
+  outline-offset: 0.65rem;
 }
+.team-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4.2rem;
+  height: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+.team-card { padding-top: clamp(2rem, 1.4rem + 2vw, 2.8rem); }
+.team-card__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 5px;
+  background: conic-gradient(from 210deg, var(--gold-300), var(--gold-600) 32%, var(--gold-300) 66%, var(--gold));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 2;
+}
+.team-card__photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  transform: scale(var(--zoom, 1));
+  transform-origin: var(--origin, 50% 50%);
+}
+.team-card__photo--natalia img { --zoom: 1.52; --origin: 100% 24%; }
+.team-card__photo--elizabeth img { --zoom: 1.32; --origin: 80% 36%; }
 .team-card h3 { margin-bottom: 0.15rem; font-size: var(--step-3); }
 .team-card__role {
   display: block;
