@@ -1,0 +1,35 @@
+# robots.txt — Puentes & Sánchez Abogadas
+# https://www.puentesysanchez.com/
+
+User-agent: *
+Allow: /
+
+# Búsqueda con IA / motores generativos (GEO 2026)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+Sitemap: https://www.puentesysanchez.com/sitemap.xml

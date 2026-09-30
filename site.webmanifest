@@ -1,0 +1,25 @@
+{
+  "name": "Puentes & Sánchez Abogadas — Puerto Montt",
+  "short_name": "P&S Abogadas",
+  "description": "Estudio jurídico de abogadas en Puerto Montt: derecho de familia, laboral, comercial y migratorio.",
+  "lang": "es-CL",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#fbf9f4",
+  "theme_color": "#0d1b2e",
+  "icons": [
+    {
+      "src": "assets/img/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "assets/img/logo.png",
+      "sizes": "725x635",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
